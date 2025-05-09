@@ -76,6 +76,7 @@ stockbroker-app
 ## Usage
 ### Interactive Mode
 To run the application in interactive mode, execute:
+
 Ubuntu/MacOS
 ```
 sh ./stockbroker.sh
@@ -88,6 +89,7 @@ You will see a prompt (`$`) where you can enter trade commands. Type `exit` to q
 
 ### File Processing Mode
 To process trade orders from a file, execute:
+
 Ubuntu/MacOS
 ```
 sh ./stockbroker.sh <path-to-orders-file>
