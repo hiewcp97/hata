@@ -41,7 +41,6 @@ stockbroker-app
 1. Clone the repository:
    ```
    git clone <repository-url>
-   cd stockbroker-app
    ```
 
 2. Create and activate a virtual environment
@@ -59,6 +58,14 @@ stockbroker-app
 4. Prepare the data files:
    - Ensure `stockcode.csv` contains valid stock codes.
    - Populate `orders.csv` with existing trade orders if needed.
+
+5. Replace the config files path:
+   ```
+   {
+      "orders_path": "{{orders_path}}",
+      "stock_codes_path": "{{stock_codes_path}}"
+   }
+   ```
 
 ## Usage
 ### Interactive Mode
