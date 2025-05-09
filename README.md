@@ -41,25 +41,31 @@ stockbroker-app
 1. Clone the repository:
    ```
    git clone <repository-url>
+   cd hata
    ```
 
 2. Create and activate a virtual environment
+   Ubuntu/MacOS
    ```
    python3 -m venv .venv
-   source .venv/bin/activate - linux 
-   .\.venv\Scripts\Activate.ps1 - windows
+   source .venv/bin/activate 
+   ```
+   Windows
+   ```
+   python3 -m venv .venv
+   .\.venv\Scripts\Activate.ps1
    ```
 
-3. Install the required dependencies:
+5. Install the required dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-4. Prepare the data files:
+6. Prepare the data files:
    - Ensure `stockcode.csv` contains valid stock codes.
    - Populate `orders.csv` with existing trade orders if needed.
 
-5. Replace the config files path:
+7. Replace the config files path:
    ```
    {
       "orders_path": "{{orders_path}}",
@@ -70,15 +76,26 @@ stockbroker-app
 ## Usage
 ### Interactive Mode
 To run the application in interactive mode, execute:
+Ubuntu/MacOS
 ```
-./stockbroker.sh
+sh ./stockbroker.sh
+```
+Windows
+```
+./stockbroker.bat
 ```
 You will see a prompt (`$`) where you can enter trade commands. Type `exit` to quit.
 
 ### File Processing Mode
 To process trade orders from a file, execute:
+Ubuntu/MacOS
 ```
-./stockbroker.sh <path-to-orders-file>
+sh ./stockbroker.sh <path-to-orders-file>
+```
+Windows
+Ubuntu/MacOS
+```
+./stockbroker.bat <path-to-orders-file>
 ```
 Replace `<path-to-orders-file>` with the path to your text file containing trade orders.
 
